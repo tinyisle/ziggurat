@@ -1,0 +1,310 @@
+/* @override 
+	http://localhost:8888/nicolodegiorgis.com/wp-content/themes/nicolodegiorgis/style.css */
+
+/*
+Theme Name: Nicolò
+Author: Elizabeth Cretney
+Author URI: http://elizabethcretney.com
+Description: 
+Version: 1.3
+License: GNU General Public License
+License URI: license.txt
+Tags: minimal, white, photography, gallery, photographer, blog, exhibition, portfolio
+*/
+
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+@font-face {
+font-family: "Pitch";
+src: url(Pitch/Pitch-Regular.otf) format("opentype");
+}
+
+@font-face {
+font-family: "Pitch-Italic";
+src: url(Pitch/Pitch-RegularItalic.otf) format("opentype");
+}
+
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+/* =Structure
+----------------------------------------------- */
+
+body {
+	padding: 0 0em;
+	margin: 0 auto;
+}
+
+#page {
+	margin: 0 auto;
+	max-width: 930px;
+	padding:  0 0px;
+	/*background: url('images/grid.png') repeat;*/
+	margin-top: -50px;
+	background-position-y: -10px;
+}
+#branding hgroup {
+	margin: 0 0;
+	text-align: center;
+	min-height: 64px;
+}
+
+
+/* =Global
+----------------------------------------------- */
+
+body, input, textarea {
+	color: #222;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 20px;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 20px;
+	line-height: 1.33;
+}
+ul, ol {
+	margin: 0;
+}
+ul {
+	list-style: square;
+}
+ol {
+	list-style-type: decimal;
+}
+ol ol {
+	list-style: upper-alpha;
+}
+ol ol ol {
+	list-style: lower-roman;
+}
+ol ol ol ol {
+	list-style: lower-alpha;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+}
+dl {
+	margin: 0;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin-bottom: 0em;
+}
+strong {
+	font-weight: bold;
+}
+cite, em, i {
+	font-style: italic;
+	font-family: "Pitch-Italic", Courier, monospace;
+}
+blockquote {
+	font-style: italic;
+	font-weight: normal;
+}
+blockquote em, blockquote i, blockquote cite {
+	font-style: normal;
+}
+pre {
+	background: #f4f4f4;
+	font: 13px "Courier 10 Pitch", Courier, monospace;
+	line-height: 1;
+	margin-bottom: 1em;
+	overflow: auto;
+	padding: 1em 1em;
+}
+code, kbd {
+	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym, dfn {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+address {
+	display: block;
+	margin: 0 0 1em;
+}
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+/* Forms */
+input[type=text],
+input[type=password],
+textarea {
+	background: #fcfcfc;
+	border: 1px solid #eee;
+	color: #000;
+}
+input[type=text]:focus,
+textarea:focus {
+	color: #000;
+}
+textarea {
+	padding-left: 3px;
+	width: 98%;
+}
+input[type=text] {
+	margin: 0;
+	padding: 0;
+	text-align:right;
+}
+input[type='text']:focus{
+text-align:right;
+}
+input#s {
+	background: #fff;
+	border: 0;
+	border-bottom: 1px solid #000;
+	text-align: right;
+	font-size: 11px;
+	line-height: 25px;
+	text-align: right !important;
+	width: 78px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+input#searchsubmit {
+	display: none;
+}
+
+/* Links */
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:focus,
+a:active,
+a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+/* Assistive text */
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/* =Header
+----------------------------------------------- */
+
+#menu, #content {
+	margin: 2em;
+	font-family: 'Pitch', monospace;
+}
+#menu a.active {
+	text-decoration: underline !important;
+}
+#content {
+	margin-top: 2em;
+	max-width:  42em;
+}
+#content a{
+	text-decoration: underline;
+}
+/*#branding-blog {
+	border-top: 0px solid #bbb;
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 9999;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 60px;
+}*/
+h2 {
+	/*font-size: 1.5em;
+	line-height: 1.33;*/
+	text-decoration: none;
+	/*display: inline-block;*/
+	text-transform: uppercase;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+em, i {
+font-style: normal;
+	font-family: 'Pitch-Italic', monospace;
+}
